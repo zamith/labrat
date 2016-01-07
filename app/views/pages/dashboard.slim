@@ -1,0 +1,14 @@
+h1.u-pushBottomLarge Lab Rat
+
+table.table
+  thead
+    tr
+      th
+      - 1.upto(width) do |column|
+        th.header = column
+  tbody
+    - 1.upto(height) do |row|
+      tr
+        td.left-header = row
+        - 1.upto(width) do |column|
+          td.tube -

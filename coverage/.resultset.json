@@ -1,0 +1,18 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/zamith/Projects/personal/my-sites/labrat/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/zamith/Projects/personal/my-sites/labrat/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1452111400
+  }
+}
