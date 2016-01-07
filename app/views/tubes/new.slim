@@ -1,0 +1,18 @@
+h1.u-pushBottomLarge Add Tube on row #{row}, column #{column}
+
+= form_for tube do |form|
+  = hidden_field_tag "tube[row]", row
+  = hidden_field_tag "tube[column]", column
+
+  .row.u-pushBottom
+    .medium-6
+      = form.label :name
+      = form.text_field :name
+
+  .row
+    .medium-12
+      = form.label :description
+      = form.text_area :description
+
+  .row.actions
+    = form.submit class: "button"

@@ -1,4 +1,4 @@
-h1.u-pushBottomLarge Lab Rat
+h1.u-pushBottomLarge.center Lab Rat
 
 table.table
   thead
@@ -11,4 +11,7 @@ table.table
       tr
         td.left-header = row
         - 1.upto(width) do |column|
-          td.tube -
+          - if tube = tubes.for(row, column)
+            td.tube = tube.name
+          - else
+            td.tube = link_to "Add", new_tube_path(row: row, column: column)

@@ -11,9 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160107223624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "tubes", force: :cascade do |t|
+    t.integer  "row",         default: 0, null: false
+    t.integer  "column",      default: 0, null: false
+    t.string   "name",                    null: false
+    t.text     "description"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "tubes", ["row", "column"], name: "index_tubes_on_row_and_column", unique: true, using: :btree
 
 end
