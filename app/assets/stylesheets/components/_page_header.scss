@@ -1,0 +1,14 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .actions > *:not(:last-child) {
+    margin-right: $spacing-small;
+  }
+
+  h1,
+  .button {
+    margin: 0;
+  }
+}

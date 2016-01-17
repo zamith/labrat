@@ -12,6 +12,6 @@ table.table
         td.left-header = row
         - 1.upto(width) do |column|
           - if tube = tubes.for(row, column)
-            td.tube = tube.name
+            td.tube.existing = link_to tube.name, tube_path(tube, row: row, column: column)
           - else
             td.tube = link_to "Add", new_tube_path(row: row, column: column)

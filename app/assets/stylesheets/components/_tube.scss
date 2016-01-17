@@ -1,3 +1,20 @@
+$color-existing-tube: mediumseagreen;
+
 .tube {
   text-align: center;
+
+  &.existing {
+    background-color: $color-existing-tube;
+
+    a {
+      color: white;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: darken($color-existing-tube, 10%);
+    }
+  }
 }

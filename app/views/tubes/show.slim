@@ -1,0 +1,22 @@
+= content_for :back do
+  = link_to "Back to tubes list", root_path
+
+.page-header.u-pushBottomLarge
+  h1 = tube.name
+
+  .actions
+    = link_to "Edit", edit_tube_path(tube), class: "button small"
+    = link_to "Remove", tube_path(tube), method: :delete, class: "alert button small"
+
+.u-pushBottomExtraLarge
+  - if tube.description.blank?
+    p This tube has no description
+  - else
+    p = tube.description
+
+- if versions.present?
+  h2.title.small Previously on this place
+
+  ul
+    - versions.each do |version|
+      li = version.name

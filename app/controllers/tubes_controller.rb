@@ -20,6 +20,30 @@ class TubesController < ApplicationController
     end
   end
 
+  def show
+    versions = PaperTrail::Version.where_object(
+      row: params[:row],
+      column: params[:column]
+    ).order(created_at: :desc)
+
+    render locals: {
+      tube: Tube.includes(:versions).find(params[:id]),
+      versions: versions.map(&:reify)
+    }
+  end
+
+  def edit
+    render locals: {
+      tube: Tube.find(params[:id])
+    }
+  end
+
+  def destroy
+    Tube.find(params[:id]).destroy
+
+    redirect_to root_path
+  end
+
   private
 
   def tube_params

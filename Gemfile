@@ -6,11 +6,12 @@ gem "rails", "4.2.5"
 
 gem "foundation-rails"
 gem "jquery-rails"
+gem "paper_trail"
 gem "pg"
 gem "pry-rails"
 gem "puma"
-gem "rack-timeout"
 gem "sass-rails"
+gem "simple_form"
 gem "slim-rails"
 gem "title"
 gem "uglifier"
@@ -25,4 +26,5 @@ end
 
 group :production do
   gem "rails_12factor"
+  gem "rack-timeout"
 end

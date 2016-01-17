@@ -1,0 +1,10 @@
+.back {
+  left: $spacing-small;
+  position: absolute;
+  top: $spacing-small;
+
+  a::before {
+    content: '<';
+    margin-right: $spacing-small / 2;
+  }
+}
